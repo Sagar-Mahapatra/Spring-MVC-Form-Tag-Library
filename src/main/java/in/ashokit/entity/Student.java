@@ -22,12 +22,12 @@ public class Student {
 	@Column(name="std_email")
 	private String studentEmail;
 	@Column(name="std_contact")
-	private Long studentContact;
+	private String studentContact;
 	@Column(name="std_gender")
 	private String studentGender;
 	@Column(name="std_course")
 	private String studentCourse;
 	@Column(name="course_timings")
-	private String[] coursetTimings;
+	private String[] courseTimings;
 	 
 }

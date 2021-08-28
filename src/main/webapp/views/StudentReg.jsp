@@ -23,9 +23,12 @@
 			<div class="card-header bg-primary text-white text-center">
 				<h3>STUDENT REGISTRATION FORM</h3>
 			</div>
+			<!-- printing message from controller -->
+			<h1 class="text-success text-center">${msg}</h1>
 			<!-- card header end -->
 			<div class="card-body">
-				<form:form action="#" method="POST" modelAttribute="student">
+				<form:form action="registerStudent" method="POST"
+					modelAttribute="student">
 					<!-- row#1 -->
 					<div class="row">
 						<div class="col-2">
@@ -81,7 +84,7 @@
 						<div class="col-5">
 							<form:select path="studentCourse" name="studentCourse"
 								id="studentCourse" class="form-control">
-								<option value="-SELECT-">-SELECT-</option>
+
 								<form:options items="${courses}"></form:options>
 
 							</form:select>
@@ -98,10 +101,10 @@
 							<label>STUDENT GENDER</label>
 						</div>
 						<div class="col-5">
-							<form:checkbox path="studentGender" name="studentGender"
+							<form:radiobutton path="studentGender" name="studentGender"
 								id="Male" value="Male" />
 							Male
-							<form:checkbox path="studentGender" name="studentGender"
+							<form:radiobutton path="studentGender" name="studentGender"
 								id="Female" value="Female" />
 							Female
 						</div>
@@ -111,19 +114,19 @@
 						</div>
 					</div>
 
-					<!-- row#6 -->
-					<div class="row">
-						<div class="col-2">
-							<label>COURSE TIMINGS</label>
-						</div>
-						<div class="col-5">
-							<form:checkboxes items="${timings}" path="coursetTimings" />
-						</div>
-						<div class="col-5">
-							<span id="empAddrError" class="text-danger">*Please Enter
-								address</span>
-						</div>
-					</div>
+					<!-- 					row#6 -->
+					<!-- 					<div class="row"> -->
+					<!-- 						<div class="col-2"> -->
+					<!-- 							<label>COURSE TIMINGS</label> -->
+					<!-- 						</div> -->
+					<!-- 						<div class="col-5"> -->
+					<%-- 							<form:checkboxes items="${timings}" path="courseTimings" /> --%>
+					<!-- 						</div> -->
+					<!-- 						<div class="col-5"> -->
+					<!-- 							<span id="studentAddrError" class="text-danger">*Please Enter -->
+					<!-- 								address</span> -->
+					<!-- 						</div> -->
+					<!-- 					</div> -->
 
 					<div class="text-center">
 						<button type="submit" class="btn btn-success">Register</button>
@@ -133,7 +136,7 @@
 			</div>
 			<!-- card body end -->
 			<div class="card-footer bg-info text-white">
-				<span><strong>Employee '101 created </strong></span>
+				<span><strong>Employee '101' created </strong></span>
 			</div>
 			<!-- footer end -->
 		</div>

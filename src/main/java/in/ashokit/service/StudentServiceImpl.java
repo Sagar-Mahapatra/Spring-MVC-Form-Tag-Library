@@ -22,9 +22,16 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public boolean registerCourse(Student student) {
-		Student savedStudent = studentRepo.save(student);
-		if (savedStudent != null && savedStudent.getStudentId() != null) {
-			return true;
+		try {
+			Student savedStudent = studentRepo.save(student);
+			if (savedStudent != null && savedStudent.getStudentId() != null) {
+				return true;
+			} else {
+				return false;
+			}
+
+		} catch (Exception e) {
+			
 		}
 		return false;
 	}
