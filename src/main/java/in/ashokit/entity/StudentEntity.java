@@ -1,9 +1,13 @@
 package in.ashokit.entity;
 
+import javax.persistence.CollectionTable;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -27,7 +31,10 @@ public class StudentEntity {
 	private String studentGender;
 	@Column(name = "std_course")
 	private String studentCourse;
-	@Column(name = "course_timings")
+
+	@OrderColumn
+	@ElementCollection
+	@CollectionTable(name = "student_course_timings", joinColumns = @JoinColumn(name = "studentId"))
 	private String[] courseTimings;
 
 }
