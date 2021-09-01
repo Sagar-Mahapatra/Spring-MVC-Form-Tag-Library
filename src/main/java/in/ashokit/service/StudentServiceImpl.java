@@ -2,10 +2,12 @@ package in.ashokit.service;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import in.ashokit.entity.Student;
+import in.ashokit.entity.StudentEntity;
 import in.ashokit.repository.CourseRepository;
 import in.ashokit.repository.CourseTimingRepository;
 import in.ashokit.repository.StudentRepository;
@@ -23,15 +25,15 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public boolean registerCourse(Student student) {
 		try {
-			Student savedStudent = studentRepo.save(student);
+			StudentEntity entity = new StudentEntity();
+			BeanUtils.copyProperties(student, entity);
+			StudentEntity savedStudent = studentRepo.save(entity);
 			if (savedStudent != null && savedStudent.getStudentId() != null) {
 				return true;
-			} else {
-				return false;
 			}
 
 		} catch (Exception e) {
-			
+			e.printStackTrace();
 		}
 		return false;
 	}
