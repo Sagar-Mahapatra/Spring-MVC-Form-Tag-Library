@@ -41,8 +41,7 @@
 						</div>
 						<div class="col-5">
 							<!-- This is to show error section -->
-							<span id="studentNameError" class="text-danger">*Please
-								Enter Valid Name</span>
+							<form:errors path="studentName" class="error" />
 						</div>
 					</div>
 
@@ -56,8 +55,7 @@
 								id="studentEmail" class="form-control" />
 						</div>
 						<div class="col-5">
-							<span id="studentEmailError" class="text-danger">*Please
-								Enter valid Email</span>
+							<form:errors path="studentEmail" class="error" />
 						</div>
 					</div>
 
@@ -114,19 +112,19 @@
 						</div>
 					</div>
 
-					<!-- 					row#6 -->
-					<!-- 					<div class="row"> -->
-					<!-- 						<div class="col-2"> -->
-					<!-- 							<label>COURSE TIMINGS</label> -->
-					<!-- 						</div> -->
-					<!-- 						<div class="col-5"> -->
-					<%-- 							<form:checkboxes items="${timings}" path="courseTimings" /> --%>
-					<!-- 						</div> -->
-					<!-- 						<div class="col-5"> -->
-					<!-- 							<span id="studentAddrError" class="text-danger">*Please Enter -->
-					<!-- 								address</span> -->
-					<!-- 						</div> -->
-					<!-- 					</div> -->
+					<!-- 	row#6 -->
+<!-- 					<div class="row"> -->
+<!-- 						<div class="col-2"> -->
+<!-- 							<label>COURSE TIMINGS</label> -->
+<!-- 						</div> -->
+<!-- 						<div class="col-5"> -->
+<%-- 							<form:checkboxes items="${timings}" path="courseTimings" /> --%>
+<!-- 						</div> -->
+<!-- 						<div class="col-5"> -->
+<!-- 							<span id="studentAddrError" class="text-danger">*Please -->
+<!-- 								Select Course Timings</span> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
 
 					<div class="text-center">
 						<button type="submit" class="btn btn-success">Register</button>

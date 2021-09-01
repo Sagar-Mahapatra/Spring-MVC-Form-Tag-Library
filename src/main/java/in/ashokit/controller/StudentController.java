@@ -21,6 +21,7 @@ public class StudentController {
 		model.addAttribute("student", new Student());
 		model.addAttribute("courses", studentService.getCourseNames());
 		model.addAttribute("timings", studentService.getCourseTimings());
+//		System.out.println(studentService.getCourseTimings());
 
 		return "StudentReg";
 
