@@ -116,19 +116,19 @@
 						</div>
 					</div>
 
-					<!-- 	row#6 -->
-					<!-- 					<div class="row"> -->
-					<!-- 						<div class="col-2"> -->
-					<!-- 							<label>COURSE TIMINGS</label> -->
-					<!-- 						</div> -->
-					<!-- 						<div class="col-5"> -->
-					<%-- 							<form:checkboxes items="${timings}" path="courseTimings" /> --%>
-					<!-- 						</div> -->
-					<!-- 						<div class="col-5"> -->
-					<!-- 							<span id="studentAddrError" class="text-danger">*Please -->
-					<!-- 								Select Course Timings</span> -->
-					<!-- 						</div> -->
-					<!-- 					</div> -->
+<!-- row#6 -->
+<!-- 					<div class="row"> -->
+<!-- 						<div class="col-2"> -->
+<!-- 							<label>COURSE TIMINGS</label> -->
+<!-- 						</div> -->
+<!-- 						<div class="col-5"> -->
+<%-- 							<form:checkboxes items="${timings}" path="courseTimings" /> --%>
+<!-- 						</div> -->
+<!-- 						<div class="col-5"> -->
+<!-- 							<span id="studentAddrError" class="text-danger">*Please -->
+<!-- 								Select Course Timings</span> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
 
 					<div class="text-center">
 						<button type="submit" class="btn btn-success">Register</button>
