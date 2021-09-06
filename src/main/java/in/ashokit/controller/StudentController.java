@@ -43,11 +43,17 @@ public class StudentController {
 
 		if (registerCourse) {
 			model.addAttribute("msg", "Registration Successful...");
+// intentionally creating null pointer exception for checking global exception
+// handle class working
+//			String x = null;
+//			x.length();
+			return "redirect:/";
 		} else {
 			model.addAttribute("msg", "Something Went Wrong, Please try again !!!");
-		}
-		return "StudentReg";
 
+		}
+
+		return "StudentReg";
 	}
 
 }
